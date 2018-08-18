@@ -14,6 +14,10 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
+/**
+ * @author kiran kumar
+ *
+ */
 @RestController
 @RequestMapping("/rest/user")
 @Api(value="User Resource", description="shows user inormation")
@@ -45,19 +49,39 @@ public class UserResource {
 		@ApiModelProperty(notes = "salary of the user")
 		private int salary;
 		
+		/**
+		 * @param name
+		 * @param salary
+		 */
 		public User(String name, int salary) {
 			this.name = name;
 			this.salary = salary;
 		}
+		
+		/**
+		 * @return
+		 */
 		public String getName() {
 			return name;
 		}
+		
+		/**
+		 * @param name
+		 */
 		public void setName(String name) {
 			this.name = name;
 		}
+		
+		/**
+		 * @return
+		 */
 		public int getSalary() {
 			return salary;
 		}
+		
+		/**
+		 * @param salary
+		 */
 		public void setSalary(int salary) {
 			this.salary = salary;
 		}
