@@ -43,6 +43,7 @@ public class UserResource {
 		return new User(userName,1000);
 	}
 	
+
 	private class User{
 		@ApiModelProperty(notes = "name of the user")
 		private String name;
